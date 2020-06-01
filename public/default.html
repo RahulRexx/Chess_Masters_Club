@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Chess</title>
+    <link rel="stylesheet" href="lib/chessboard-0.3.0.min.css">
+    <link rel="stylesheet" href="/default.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Chat + Controls -->
+      <div class="row ">
+        <div class="col-4" style="border:solid;background-color:grey">
+          <div class="container" >
+            <div class="row">
+              <!--Player Turn + Button Col -->
+              <div class="col" >
+                <div class="row">
+                  <h5>Room No.:</h5>
+                  <hr/>
+                  <h5>Player Turn:</h5>
+                  <div id="playturn"></div>
+                </div>
+                <hr/>
+                <!-- Button -->
+                <button class="btn btn-block btn-danger" style="font-size:90%" onclick="leaveGame()">Leave Game</button>
+                <hr/>
+              </div>
+            </div>
+          </div>
+          <hr/>
+          <!-- Chat -->
+          <div class="col">
+            <div class="row">
+              <div id="show_comments" class="pre-scrollable" ></div>
+              <div class="flexContainer">
+                <input id="comment" placeholder="Message" class="inputField"></input>
+                <button id="add_message">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Chessboard -->
+        <div class="col-8 ml-auto">
+          <div class="row">
+            <div id="gameBoard" style="width: 100vh"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+        
+    <script src="lib/socket.io-1.2.0.js"></script>
+    <script src="lib/chess.min.js"></script> 
+    <script src="lib/chessboard-0.3.0.min.js"></script> 
+    <script src="lib/jquery-1.11.1.js"></script> 
+    <script src="/default.js"></script>
+  </body>
+</html>
